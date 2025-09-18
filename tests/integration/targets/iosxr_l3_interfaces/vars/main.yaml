@@ -1,8 +1,6 @@
 ---
 merged:
   before:
-    - name: Loopback888
-    - name: Loopback999
   commands:
     - interface GigabitEthernet0/0/0/0
     - ipv4 address 198.51.100.1 255.255.255.0
@@ -11,8 +9,6 @@ merged:
     - ipv4 address 192.0.2.1 255.255.255.0
     - ipv6 address 2001:db8:0:3::/64
   after:
-    - name: Loopback888
-    - name: Loopback999
     - ipv4:
         - address: 198.51.100.1/24
       name: GigabitEthernet0/0/0/0
@@ -25,8 +21,6 @@ merged:
       name: GigabitEthernet0/0/0/1
 replaced:
   before:
-    - name: Loopback888
-    - name: Loopback999
     - ipv4:
         - address: 198.51.100.1/24
       ipv6:
@@ -43,8 +37,6 @@ replaced:
     - ipv4 address 203.0.113.27 255.255.255.0
     - ipv4 address 203.0.114.1 255.255.255.0 secondary
   after:
-    - name: Loopback888
-    - name: Loopback999
     - ipv4:
         - address: 203.0.113.27/24
         - address: 203.0.114.1/24
@@ -57,8 +49,6 @@ replaced:
       name: GigabitEthernet0/0/0/1
 overridden:
   before:
-    - name: Loopback888
-    - name: Loopback999
     - ipv4:
         - address: 198.51.100.1/24
       ipv6:
@@ -78,8 +68,6 @@ overridden:
     - ipv4 address 198.51.102.1 255.255.255.0
     - ipv6 address 2001:db8:1::/64
   after:
-    - name: Loopback888
-    - name: Loopback999
     - name: GigabitEthernet0/0/0/0
     - ipv4:
         - address: 198.51.102.1/24
@@ -96,7 +84,6 @@ rendered:
     - ipv6 address 2001:db8:0:3::/64
 parsed:
   after:
-    - name: Loopback888
     - ipv4:
         - address: 10.8.38.70/24
       name: MgmtEth0/RP0/CPU0/0
@@ -114,8 +101,6 @@ parsed:
       name: GigabitEthernet0/0/0/3
 deleted:
   before:
-    - name: Loopback888
-    - name: Loopback999
     - ipv4:
         - address: 198.51.100.1/24
       ipv6:
@@ -133,7 +118,5 @@ deleted:
     - interface GigabitEthernet0/0/0/1
     - no ipv4 address
   after:
-    - name: Loopback888
-    - name: Loopback999
     - name: GigabitEthernet0/0/0/0
     - name: GigabitEthernet0/0/0/1
