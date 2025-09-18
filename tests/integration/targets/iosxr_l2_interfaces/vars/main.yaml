@@ -102,6 +102,7 @@ overridden:
     - name: Loopback888
     - name: Loopback999
     - name: MgmtEth0/RP0/CPU0/0
+    - name: GigabitEthernet0/0/0/1
     - name: GigabitEthernet0/0/0/3.900
       encapsulation:
         dot1q: 20
@@ -136,7 +137,9 @@ deleted:
     - interface GigabitEthernet0/0/0/4
     - no l2transport
   after:
-    - name: Loopback888
-    - name: Loopback999
-    - name: MgmtEth0/RP0/CPU0/0
-    - name: GigabitEthernet0/0/0/3.900
+  - name: Loopback888
+  - name: Loopback999
+  - name: MgmtEth0/RP0/CPU0/0
+  - name: GigabitEthernet0/0/0/1          # Should be present
+  - name: GigabitEthernet0/0/0/3.900
+  - name: GigabitEthernet0/0/0/4   
