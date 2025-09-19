@@ -49,8 +49,7 @@ merged:
           - route_policy: A_NEW_ROUTE_POLICY
         set:
           community:
-            additive: true
-            community_name: (11011:1001)
+            community_name: (11011:1001) additive
           med:
             value: 100
           extcommunity:
